@@ -76,7 +76,7 @@ class SessionManager:
 
     @staticmethod
     def create_session(username):
-        token = get_token(24)
+        token = get_token(16)
         session = Session(
             token=token,
             username=username
