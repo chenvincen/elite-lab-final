@@ -7,6 +7,15 @@ from flask_migrate import Migrate
 app = Flask(__name__)
 
 basedir = os.path.abspath(os.path.dirname(__file__))
+
+database_url = os.eviron.get('DATABASE_URL', None)
+
+if database_url
+    app.config['SQLALCHEMY_DATABASE_URL'] = database_url
+else: 
+    app.config['SQLALCHEMY_DATABASE_URL'] = 'sqlite:///' + \
+        os.path.join(basedir, '../app.db')
+
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + \
     os.path.join(basedir, '../app.db')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False

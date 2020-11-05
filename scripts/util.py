@@ -54,3 +54,4 @@ if __name__ == '__main__':
     call_create_message_api(request_body_2)
 
     call_delete_all_message_api()
+    test
