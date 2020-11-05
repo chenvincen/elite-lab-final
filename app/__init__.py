@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 
-database_url = os.eviron.get('DATABASE_URL', None)
+database_url = os.environ.get('DATABASE_URL', None)
 
 if database_url:
     app.config['SQLALCHEMY_DATABASE_URL'] = database_url
